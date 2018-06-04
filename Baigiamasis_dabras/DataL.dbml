@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Data" Class="DataLDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Data.mdf;Integrated Security=True" SettingsObjectName="Baigiamasis_dabras.Properties.Settings" SettingsPropertyName="DataConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Vartotojai" Member="Vartotojais">
+    <Type Name="Vartotojai">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vartotojas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Slaptazodis" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Klientai" Member="Klientais">
+    <Type Name="Klientai">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vardas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Numeris" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Elpastas" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Vip" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Klientaitikrint" Member="Klientaitikrints">
+    <Type Name="Klientaitikrint">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vardas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Numeris" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Elpastas" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Vip" Type="System.String" DbType="NVarChar(4)" CanBeNull="true" />
+      <Column Name="Vartotojas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Session" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Veiksmas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ivykiai" Member="Ivykiais">
+    <Type Name="Ivykiai">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Vartotojas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Session" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Eventas" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="Tekstas" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="TikslusLaikas" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Tarpas" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
